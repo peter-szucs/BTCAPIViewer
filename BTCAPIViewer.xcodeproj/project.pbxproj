@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52C7C3CA250784A100343D44 /* CoinRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7C3C9250784A100343D44 /* CoinRow.swift */; };
 		52DD5BC6250620FB00ECC213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD5BC5250620FB00ECC213 /* AppDelegate.swift */; };
 		52DD5BC8250620FB00ECC213 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD5BC7250620FB00ECC213 /* SceneDelegate.swift */; };
 		52DD5BCA250620FB00ECC213 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD5BC9250620FB00ECC213 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52C7C3C9250784A100343D44 /* CoinRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRow.swift; sourceTree = "<group>"; };
 		52DD5BC2250620FB00ECC213 /* BTCAPIViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTCAPIViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DD5BC5250620FB00ECC213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DD5BC7250620FB00ECC213 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				52DD5BD3250620FF00ECC213 /* Info.plist */,
 				52DD5BCD250620FF00ECC213 /* Preview Content */,
 				52DD5BD92506217500ECC213 /* Data.swift */,
+				52C7C3C9250784A100343D44 /* CoinRow.swift */,
 			);
 			path = BTCAPIViewer;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				52DD5BC6250620FB00ECC213 /* AppDelegate.swift in Sources */,
 				52DD5BC8250620FB00ECC213 /* SceneDelegate.swift in Sources */,
 				52DD5BCA250620FB00ECC213 /* ContentView.swift in Sources */,
+				52C7C3CA250784A100343D44 /* CoinRow.swift in Sources */,
 				52DD5BDA2506217500ECC213 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

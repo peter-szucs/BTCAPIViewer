@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+
+
 struct CoinPrice: Codable {
 //    var id: String
     var base_currency_id: String = ""
@@ -19,7 +21,7 @@ struct CoinPrice: Codable {
     var price: Double = 0.0
 }
 
-struct CoinGecko: Codable {
+struct CoinGecko: Decodable {
     var eth: Double = 0.0
     var eth_24h_change: Double = 0.0
     var ltc: Double = 0.0
@@ -30,6 +32,39 @@ struct CoinGecko: Codable {
     var eur_24h_change: Double = 0.0
     var usd: Double = 0.0
     var usd_24h_change: Double = 0.0
+    
+    private enum CoinGeckoKeys: String, CodingKey {
+        case bitcoin
+    }
+    
+    private enum MainKeys: String, CodingKey {
+        case eth
+        case eth_24h_change
+        case ltc
+        case ltc_24h_change
+        case sek
+        case sek_24h_change
+        case eur
+        case eur_24h_change
+        case usd
+        case usd_24h_change
+    }
+    
+    init(from decoder: Decoder) throws {
+        if let coinGeckoContainer = try? decoder.container(keyedBy: CoinGeckoKeys.self) {
+            if let mainContainer = try? coinGeckoContainer.nestedContainer(keyedBy: MainKeys.self, forKey: .bitcoin) {
+                
+                self.eth = try mainContainer.decode(Double.self, forKey: .eth)
+                self.eth_24h_change = try mainContainer.decode(Double.self, forKey: .eth_24h_change)
+                self.ltc = try mainContainer.decode(Double.self, forKey: .ltc)
+                self.ltc_24h_change = try mainContainer.decode(Double.self, forKey: .ltc_24h_change)
+                self.sek = try mainContainer.decode(Double.self, forKey: .sek)
+                self.sek_24h_change = try mainContainer.decode(Double.self, forKey: .sek_24h_change)
+                self.eur = try mainContainer.decode(Double.self, forKey: .eur)
+                self.eur_24h_change = try mainContainer.decode(Double.self, forKey: .eur_24h_change)
+            }
+        }
+    }
     
 }
 
